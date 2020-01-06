@@ -12,7 +12,7 @@ const routes = [
     children: [
       {
         path: 'map',
-        name: 'Application',
+        name: 'application',
         component: () => import('../views/Application.vue')
       }
     ]
