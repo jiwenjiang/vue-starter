@@ -1,19 +1,19 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Map msg="Welcome to Your Map"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue'
+import Map from '@/components/map/map'
 import http from '@/services/http'
 import url from '@/config/url/common'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Map
   },
   mounted() {
     http.get(url.mapService, (succ) => {

@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    about
-  </div>
+    <div class="application">
+        application
+    </div>
 </template>
 
 <script>
@@ -10,8 +10,7 @@ import url from '@/config/url/common'
 
 export default {
   name: 'application',
-  components: {
-  },
+  components: {},
   mounted() {
     http.get(url.mapService, (succ) => {
       console.log('succ', succ)
@@ -21,3 +20,14 @@ export default {
   }
 }
 </script>
+<style lang="less">
+.application {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: 1;
+    /*width: 400px;*/
+    /*height: 400px;*/
+    /*background: yellow;*/
+}
+</style>

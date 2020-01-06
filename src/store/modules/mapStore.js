@@ -1,10 +1,10 @@
 const mapStore = {
   state: {
-    userInfo: {}
+    mapId: 1
   },
   mutations: {
     SAVE_USERINFO(state, e) {
-      state.userInfo = e
+      state.mapId = e
     }
   },
   actions: {
@@ -13,8 +13,8 @@ const mapStore = {
     }
   },
   getters: {
-    userInfo(state) {
-      return state.userInfo
+    mapId(state) {
+      return state.mapId
     }
   }
 }

@@ -8,7 +8,14 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: 'map',
+        name: 'Application',
+        component: () => import('../views/Application.vue')
+      }
+    ]
   },
   {
     path: '/about',
