@@ -9,7 +9,9 @@ export default {
   name: 'app',
   components: {},
   beforeCreate() {
-    this.$router.push('/')
+    if (window.location.pathname !== '/') {
+      this.$router.push('/')
+    }
   },
   mounted() {
   }

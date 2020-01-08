@@ -7,8 +7,8 @@
 
 <script>
 import Map from '@/components/map/map'
-import http from '@/services/http'
-import url from '@/config/url/common'
+// import http from '@/services/http'
+// import url from '@/config/url/common'
 
 export default {
   name: 'home',
@@ -16,11 +16,11 @@ export default {
     Map
   },
   mounted() {
-    http.get(url.mapService, (succ) => {
-      console.log('succ', succ)
-    }, (err) => {
-      console.log('err', err)
-    })
+    // http.get(url.mapService, (succ) => {
+    //   console.log('succ', succ)
+    // }, (err) => {
+    //   console.log('err', err)
+    // })
   }
 }
 </script>
