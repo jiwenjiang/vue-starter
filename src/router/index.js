@@ -13,7 +13,7 @@ const routes = [
       {
         path: 'map',
         name: 'application',
-        component: () => import('../views/Application.vue')
+        component: () => import(/* webpackChunkName: "application" */ '../views/Application.vue')
       }
     ]
   },

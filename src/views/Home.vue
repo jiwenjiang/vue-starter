@@ -7,8 +7,8 @@
 
 <script>
 import Map from '@/components/map/map'
-// import http from '@/services/http'
-// import url from '@/config/url/common'
+import http from '@/services/http'
+import url from '@/config/url/common'
 
 export default {
   name: 'home',
@@ -16,11 +16,14 @@ export default {
     Map
   },
   mounted() {
-    // http.get(url.mapService, (succ) => {
-    //   console.log('succ', succ)
-    // }, (err) => {
-    //   console.log('err', err)
-    // })
+    http.get(url.uidConfig, { id: '7d5b53fbd7e8430989618007ea8b740b' }, (succ) => {
+      console.log('succ', succ)
+      setTimeout(() => {
+        document.dispatchEvent(new Event('render-event'))
+      }, 25000)
+    }, (err) => {
+      console.log('err', err)
+    })
   }
 }
 </script>

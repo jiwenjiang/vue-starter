@@ -5,7 +5,7 @@ const Renderer = PrerenderSPAPlugin.PuppeteerRenderer
 const plugins = process.env.NODE_ENV === 'production' ? [
   new PrerenderSPAPlugin({
     // Required - The path to the webpack-outputted app to prerender.
-    staticDir: path.join(__dirname, 'dist'),
+    staticDir: path.join(__dirname, './dist'),
     // Required - Routes to render.
     routes: ['/'],
     ignoreJSErrors: true,
@@ -22,7 +22,7 @@ module.exports = {
       rules: [
         {
           test: /\.js$/,
-          exclude: /(node_modules|lq_vernder)/,
+          exclude: /(node_modules|lq_vernder|mapbox-gl)/,
           use: {
             loader: 'babel-loader',
             options: {
